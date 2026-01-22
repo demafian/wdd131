@@ -1,0 +1,23 @@
+@media (min-width: 740px) {
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        width: auto;
+        box-shadow: none;
+    }
+
+    .navigation a {
+        border-bottom: none;
+        padding: 0 1rem;
+    }
+
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,151 @@
+:root {
+    --primary-color: #1e4d6b;
+    --nav-bg: #333;
+    --card-bg: #fff;
+    --font-family: 'Roboto', sans-serif;
+    --accent-color: #ffd700;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* KEY: This anchors the absolute positioned menu navigation */
+    position: relative;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* --- Animated Hamburger Menu --- */
+#menu {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 2rem;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Base icon state (Hamburger) */
+#menu span::before {
+    content: "☰";
+}
+
+/* Open icon state (X and Gold) */
+#menu.open {
+    transform: rotate(90deg);
+    color: var(--accent-color);
+}
+
+#menu.open span::before {
+    content: "✕";
+    /* Using a text X for cleaner rotation */
+}
+
+/* --- Fixed Navigation Placement --- */
+.navigation {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: var(--nav-bg);
+    width: 100%;
+    /* This forces the menu to appear exactly at the bottom of the header */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navigation.open {
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation a {
+    display: block;
+    padding: 1.2rem;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #444;
+}
+
+.navigation a:hover {
+    color: var(--accent-color);
+    background-color: #444;
+}
+
+/* --- Main Layout --- */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.temple-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+figure {
+    background-color: var(--card-bg);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 0;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+#lastModified {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    margin-top: 10px;
+}

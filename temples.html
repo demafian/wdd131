@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album - Sizwe Athur Nkosi</title>
+    <meta name="description"
+        content="A responsive gallery of LDS Temples for WDD 131 project including historical and modern designs.">
+    <meta name="author" content="Sizwe Athur Nkosi">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preconnect" href="https://www.thechurchnews.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 740px)">
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="menu" aria-label="Toggle Menu"><span></span></button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Temple Gallery</h2>
+        <div class="temple-grid">
+            <figure>
+                <img src="https://www.thechurchnews.com/resizer/v2/OVROZAEP2UXIW4GQHCHQO3ZVYU.jpg?auth=6e962872342d1d7b0c914cb565611546eb495c9c886ecfbb31aec3ebb5650ba8&width=400&height=250"
+                    alt="St. George Utah Temple" fetchpriority="high" width="400" height="250">
+                <figcaption>St. George Utah</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.thechurchnews.com/resizer/v2/7M7XWWI5K6VPWBBH3PZLWWLJ4Q.jpg?auth=60b4290f81a83ef833c5b9bacdd61c6ecbc5ade599d7f085e2ca264b90215e5e&width=400&height=250"
+                    alt="Manti Utah Temple" loading="lazy" width="400" height="250">
+                <figcaption>Manti Utah</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.thechurchnews.com/resizer/v2/N7A4MSMXFVL2ZNXWZ3BRXOKXYM.jpg?auth=6a4f697a96b428a3a799e0eadeb688ef936f7c88280407d0b10163276341ba50&width=400&height=250"
+                    alt="Bern Switzerland Temple" loading="lazy" width="400" height="250">
+                <figcaption>Bern Switzerland</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.thechurchnews.com/resizer/v2/6QK6S4QWVX2PBGP6PTERGN75OY.jpg?auth=19f495bc1d6df1b865ccc9832109952a1aee56ded921fb7fd023c05aff63d80a&width=400&height=250"
+                    alt="Hamilton New Zealand Temple" loading="lazy" width="400" height="250">
+                <figcaption>Hamilton New Zealand</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.thechurchnews.com/resizer/v2/UX6AKAHN4MISMNVIU2IJN5W3MQ.jpg?auth=982bb1a05f76bccad7f153e33f57294b6d502739cc3f13baa948a3064d8c0344&width=400&height=250"
+                    alt="Johannesburg South Africa Temple" loading="lazy" width="400" height="250">
+                <figcaption>Johannesburg South Africa</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.thechurchnews.com/resizer/v2/JU5VCVLZHWL3NQ24CX74ZPUZMY.jpg?auth=cf930ac71809a8b32e83ee8211464a26ff9db83d23d84c5f366a6ed3c1c0f743&width=400&height=250"
+                    alt="Barranquilla Colombia Temple" loading="lazy" width="400" height="250">
+                <figcaption>Barranquilla Colombia</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.thechurchnews.com/resizer/v2/GUILDTW4UJFYHPTDN22PCSS5TU.JPG?auth=d194981a93a00a13681ce53663da2bb1caa69ee315c85f1dc044e402b297f069&width=400&height=250"
+                    alt="Deseret Peak Utah Temple" loading="lazy" width="400" height="250">
+                <figcaption>Deseret Peak Utah</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.thechurchnews.com/resizer/v2/6ZAPXHJA7FDIZNYXU3WUW3VUNQ.JPG?auth=c87d434d98b31be5b8c1cdf3cafd660231ae3c08ea1a3eda90493b90fcf8cf35&width=400&height=250"
+                    alt="Burley Idaho Temple" loading="lazy" width="400" height="250">
+                <figcaption>Burley Idaho</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.thechurchnews.com/resizer/v2/Z34T7H4KE5EM7CFNX4THRRDL5A.jpg?auth=58cdaec844e3a0d63a867f46d53a779a10d794b07903654b1cd41bd99a8bb544&width=400&height=250"
+                    alt="Alabang Philippines Temple" loading="lazy" width="400" height="250">
+                <figcaption>Alabang Philippines</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Sizwe Athur Nkosi | South Africa</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
