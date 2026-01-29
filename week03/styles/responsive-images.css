@@ -1,0 +1,21 @@
+/* Universal reset for this activity */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero {
+    max-width: 100%;
+    margin: 20px auto;
+    border: 5px solid #eee;
+    /* Just to see the container */
+}
+
+/* Maintain aspect ratio and prevent layout shift */
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Removes bottom whitespace */
+}
