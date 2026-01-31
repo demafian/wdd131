@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soshanguve, South Africa | WDD 131</title>
+    <meta name="description" content="Information about Soshanguve, South Africa including facts and weather.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Soshanguve</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/landscape-large.webp" media="(min-width: 800px)">
+                <img src="images/landscape-small.webp" alt="Aerial view of Soshanguve" class="hero-img">
+            </picture>
+
+            <div class="card data-card">
+                <h2>Data</h2>
+                <ul>
+                    <li><span>Area:</span> <span>126 km²</span></li>
+                    <li><span>Population:</span> <span>403,000</span></li>
+                    <li><span>Capital:</span> <span>Pretoria</span></li>
+                    <li><span>Languages:</span> <span>Sepedi, Setswana</span></li>
+                    <li><span>Currency:</span> <span>ZAR</span></li>
+                    <li><span>Time Zone:</span> <span>SAST (UTC+2)</span></li>
+                </ul>
+            </div>
+
+            <div class="card weather-card">
+                <h3 id="weather-heading">Weather</h3>
+                <div class="weather-info">
+                    <svg class="weather-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                        fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="M4.158 12.025a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m6 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m-3.5 1.5a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m6 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m.747-8.498a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 11H13a3 3 0 0 0 .405-5.973M8.5 2a4 4 0 0 1 3.976 3.555.5.5 0 0 0 .5.445H13a2 2 0 0 1 0 4H3.5a2.5 2.5 1 1 1 .605-4.926.5.5 0 0 0 .596-.329A4 4 0 0 1 8.5 2" />
+                    </svg>
+                    <ul>
+                        <li><span>Temperature:</span> <span><span id="temp">9</span>°C</span></li>
+                        <li><span>Conditions:</span> <span>Drizzle</span></li>
+                        <li><span>Wind:</span> <span><span id="wind">12</span> km/h</span></li>
+                        <li><span>Wind Chill:</span> <span><span id="windchill"></span></span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Sizwe Athur Nkosi | South Africa</p>
+        <p id="lastModified"></p>
+        <p class="attribution">
+            Hero Image: <a href="https://www.pexels.com/photo/aerial-view-of-phola-township-mpumalanga-33621869/"
+                target="_blank">Photo by Kelly</a> |
+            Weather Icon: <a href="https://icons.getbootstrap.com/" target="_blank">Bootstrap Icons</a>
+        </p>
+    </footer>
+</body>
+
+</html>
