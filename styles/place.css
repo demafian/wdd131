@@ -130,10 +130,13 @@ footer {
     color: white;
     padding: 2rem 1rem;
     text-align: center;
+    /* Added font-weight to bold the white text as requested */
+    font-weight: 700;
 }
 
 #lastModified {
-    color: var(--accent-color);
+    /* Using a brighter gold to ensure it stands out on the dark blue */
+    color: #ffeb3b;
     font-weight: bold;
     display: block;
     margin-top: 5px;
@@ -142,10 +145,14 @@ footer {
 .attribution {
     font-size: 0.8rem;
     margin-top: 15px;
-    opacity: 0.8;
+    opacity: 0.9;
+    /* Increased opacity slightly for better readability */
+    font-weight: normal;
+    /* Keep this thin to create a hierarchy */
 }
 
 .attribution a {
-    color: var(--accent-color);
-    text-decoration: none;
+    color: #ffeb3b;
+    /* Use the brighter yellow here too */
+    text-decoration: underline;
 }
