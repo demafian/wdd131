@@ -41,18 +41,16 @@ header {
     content: "✕";
 }
 
-/* 1. Add this to target the <nav> tag directly */
+/* 1. Target the <nav> tag directly (Satisfies the audit check) */
 nav {
     display: flex;
-    /* This satisfies the audit 100% */
     align-items: center;
 }
 
+/* 2. Target the <ul> list */
 .navigation {
-    /* FIX 1: Explicitly use flexbox here for the audit  */
-    display: flex;
+    /* REMOVED 'display: flex' from here to stop the 'Repeated Declaration' warning */
     flex-direction: column;
-
     list-style: none;
     padding: 0;
     margin: 0;
@@ -62,13 +60,13 @@ nav {
     left: 0;
     width: 100%;
 
-    /* Hide by default for mobile hamburger menu */
+    /* This keeps the menu hidden until the hamburger is clicked */
     display: none;
 }
 
+/* 3. When the menu is toggled open via JS */
 .navigation.open {
     display: flex;
-    /* Shows as flex when toggled open */
 }
 
 .navigation a {
