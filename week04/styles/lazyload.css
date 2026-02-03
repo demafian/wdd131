@@ -1,0 +1,51 @@
+/* General Layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header,
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Image Styling and Animation */
+img {
+    display: block;
+    width: 400px;
+    height: 600px;
+    /* Required to reserve space */
+    margin-bottom: 50vh;
+    /* Pushes images down so they load during scroll */
+    background-color: #000;
+    /* The 'black' part of the fade-from-black */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+    /* Animation settings */
+    animation: fadeFromBlack 2s ease-in-out;
+}
+
+/* Fade-from-black animation */
+@keyframes fadeFromBlack {
+    0% {
+        opacity: 0;
+        filter: grayscale(100%);
+    }
+
+    100% {
+        opacity: 1;
+        filter: grayscale(0%);
+    }
+}
