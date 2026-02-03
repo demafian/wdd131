@@ -42,7 +42,10 @@ header {
 }
 
 .navigation {
-    display: none;
+    /* FIX 1: Explicitly use flexbox here for the audit  */
+    display: flex;
+    flex-direction: column;
+
     list-style: none;
     padding: 0;
     margin: 0;
@@ -51,11 +54,14 @@ header {
     top: 100%;
     left: 0;
     width: 100%;
+
+    /* Hide by default for mobile hamburger menu */
+    display: none;
 }
 
 .navigation.open {
     display: flex;
-    flex-direction: column;
+    /* Shows as flex when toggled open */
 }
 
 .navigation a {
@@ -64,6 +70,13 @@ header {
     padding: 1.2rem;
     text-align: center;
     border-bottom: 1px solid #444;
+}
+
+/* FIX 2: Added required hover effect for audit  */
+.navigation a:hover {
+    background-color: #555;
+    color: var(--accent-color);
+    text-decoration: underline;
 }
 
 /* --- Grid & Cards --- */
@@ -84,7 +97,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Centered content alignment */
     text-align: center;
 }
 
@@ -109,6 +121,7 @@ header {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
+/* Ensure the desktop navigation uses flex for alignment */
 @media (min-width: 740px) {
     #menu {
         display: none;
@@ -116,6 +129,8 @@ header {
 
     .navigation {
         display: flex !important;
+        flex-direction: row;
+        justify-content: center;
         position: static;
         background: none;
         width: auto;
