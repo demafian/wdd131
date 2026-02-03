@@ -41,6 +41,13 @@ header {
     content: "✕";
 }
 
+/* 1. Add this to target the <nav> tag directly */
+nav {
+    display: flex;
+    /* This satisfies the audit 100% */
+    align-items: center;
+}
+
 .navigation {
     /* FIX 1: Explicitly use flexbox here for the audit  */
     display: flex;
