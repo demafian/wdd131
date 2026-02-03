@@ -41,15 +41,15 @@ header {
     content: "✕";
 }
 
-/* 1. Target the <nav> tag directly (Satisfies the audit check) */
+/* --- Flex Container for Nav --- */
 nav {
     display: flex;
     align-items: center;
 }
 
-/* 2. Target the <ul> list */
+/* --- Navigation Links --- */
 .navigation {
-    /* REMOVED 'display: flex' from here to stop the 'Repeated Declaration' warning */
+
     flex-direction: column;
     list-style: none;
     padding: 0;
@@ -64,7 +64,7 @@ nav {
     display: none;
 }
 
-/* 3. When the menu is toggled open via JS */
+/* --- Show Navigation When Open --- */
 .navigation.open {
     display: flex;
 }
@@ -77,7 +77,7 @@ nav {
     border-bottom: 1px solid #444;
 }
 
-/* FIX 2: Added required hover effect for audit  */
+/* --- Navigation Hover Effect --- */
 .navigation a:hover {
     background-color: #555;
     color: var(--accent-color);
@@ -126,7 +126,7 @@ nav {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Ensure the desktop navigation uses flex for alignment */
+/* --- Responsive Navigation --- */
 @media (min-width: 740px) {
     #menu {
         display: none;
