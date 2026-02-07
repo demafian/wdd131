@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lean Developer Guide | GlobalDev Roadmap</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/lean-developer.css">
+</head>
+
+<body>
+    <header>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <img src="images/globaldev-icon.svg" alt="GlobalDev Logo" style="height: 60px; width: 60px;">
+            <h1>GlobalDev Roadmap</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="resources.html">Resources</a>
+            <a href="lean-developer.html" class="active">Lean Developer</a>
+            <a href="community.html">Community</a>
+            <a href="siteplan.html">Site Plan</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero-section">
+            <h1>The Lean Developer Guide</h1>
+            <p>Essential principles for high-efficiency coding in any environment</p>
+            <p class="subtitle">For developers in resource-constrained regions and teams optimizing for speed and
+                efficiency</p>
+        </section>
+
+        <section class="principle-section">
+            <h2>Core Principles</h2>
+
+            <article class="principle-card">
+                <h3>1. Algorithmic Efficiency First</h3>
+                <p>Before optimizing infrastructure, optimize algorithms. A O(n) solution vs O(n²) makes more difference
+                    than adding RAM.</p>
+                <ul>
+                    <li>Understand Big O notation and complexity analysis</li>
+                    <li>Choose appropriate data structures (arrays vs linked lists vs hashmaps)</li>
+                    <li>Profile code bottlenecks before premature optimization</li>
+                </ul>
+                <code>// Good: O(n) - single pass
+for (const item of items) { process(item); }
+
+// Bad: O(n²) - nested iteration
+for (const item of items) {
+    for (const other of items) { compare(item, other); }
+}</code>
+            </article>
+
+            <article class="principle-card">
+                <h3>2. Minimize Data Transfer</h3>
+                <p>In regions with high data costs, reducing network calls and data payload is critical.</p>
+                <ul>
+                    <li>Batch API requests instead of multiple round trips</li>
+                    <li>Compress data where possible</li>
+                    <li>Cache intelligently on the client and server</li>
+                    <li>Use pagination and lazy loading for large datasets</li>
+                </ul>
+                <code>// Good: Single request with pagination
+fetch('/api/users?page=1&limit=10')
+
+// Bad: Multiple requests
+for (let i = 1; i <= 100; i++) {
+    fetch(`/api/users/${i}`);
+}</code>
+            </article>
+
+            <article class="principle-card">
+                <h3>3. Write for Maintainability</h3>
+                <p>Code that's easy to understand reduces debugging time and future refactoring costs.</p>
+                <ul>
+                    <li>Use clear variable and function names</li>
+                    <li>Write functions that do one thing well</li>
+                    <li>Document complex logic and edge cases</li>
+                    <li>Follow consistent code style and patterns</li>
+                </ul>
+                <code>// Good: Clear intent
+function calculateMonthlyInterest(principal, annualRate) {
+    return (principal * annualRate) / 12 / 100;
+}
+
+// Bad: Unclear
+function calc(p, r) {
+    return (p * r) / 12 / 100;
+}</code>
+            </article>
+
+            <article class="principle-card">
+                <h3>4. Embrace Version Control & Testing</h3>
+                <p>Git and automated tests catch bugs early, reducing costly manual debugging.</p>
+                <ul>
+                    <li>Commit frequently with meaningful messages</li>
+                    <li>Write unit tests for critical functions</li>
+                    <li>Use branches for features and fixes</li>
+                    <li>Document deployment procedures</li>
+                </ul>
+                <code>// Test critical logic thoroughly
+function test_calculateMonthlyInterest() {
+    assert(calculateMonthlyInterest(1000, 12) === 10);
+    assert(calculateMonthlyInterest(0, 5) === 0);
+}</code>
+            </article>
+
+            <article class="principle-card">
+                <h3>5. Choose Lightweight Tools & Languages</h3>
+                <p>Heavy frameworks and dependencies consume bandwidth and resources unnecessarily.</p>
+                <ul>
+                    <li>Prefer vanilla JavaScript over heavy frameworks when possible</li>
+                    <li>Use static site generation for content that doesn't change often</li>
+                    <li>Minimize dependencies; audit what you import</li>
+                    <li>Consider compiled languages (Go, Rust) for performance-critical services</li>
+                </ul>
+                <code>// Good: Minimal dependencies
+<script src="scripts/app.js"></script>
+
+// Potentially Excessive
+<script src="node_modules/framework/dist/full.min.js"></script></code>
+            </article>
+
+            <article class="principle-card">
+                <h3>6. Optimize for the Client Environment</h3>
+                <p>Respect users' hardware constraints and connection speeds.</p>
+                <ul>
+                    <li>Support offline functionality with service workers</li>
+                    <li>Use responsive images and lazy loading</li>
+                    <li>Minify and compress assets</li>
+                    <li>Test on slow networks and older devices</li>
+                </ul>
+                <code>// Good: Lazy load images
+<img src="placeholder.jpg" data-src="full.jpg" loading="lazy" alt="Description">
+
+// Tree-friendly: CDN with compression
+<link rel="preconnect" href="https://cdn.example.com"></code>
+            </article>
+
+            <article class="principle-card">
+                <h3>7. Monitor & Measure</h3>
+                <p>You can't optimize what you don't measure. Use logging and profiling tools.</p>
+                <ul>
+                    <li>Log errors and performance metrics</li>
+                    <li>Monitor API response times</li>
+                    <li>Track user behavior to identify bottlenecks</li>
+                    <li>Set performance budgets and track against them</li>
+                </ul>
+                <code>// Good: Performance monitoring
+console.time('fetchData');
+const data = await fetchUserData();
+console.timeEnd('fetchData'); // Logs elapsed time</code>
+            </article>
+        </section>
+
+        <section class="resources-section">
+            <h2>Recommended Learning Resources</h2>
+            <p>To master these principles, explore our curated resources focusing on:</p>
+            <ul>
+                <li><strong>Algorithms & Data Structures:</strong> Harvard CS50, MIT OpenCourseWare</li>
+                <li><strong>System Design:</strong> Google DevOps, Udacity Nanodegrees</li>
+                <li><strong>Web Performance:</strong> Google Developers, FreeCodeCamp</li>
+            </ul>
+            <a href="resources.html" class="btn-cta">Explore All Resources</a>
+        </section>
+
+        <section class="practice-section">
+            <h2>Practice Challenges</h2>
+            <p>Apply Lean Developer principles with these exercises:</p>
+            <ol>
+                <li>Refactor a nested loop into a more efficient algorithm using a hashmap</li>
+                <li>Implement lazy loading for images on a web page</li>
+                <li>Write unit tests for a utility function</li>
+                <li>Optimize a database query to reduce the number of round trips</li>
+                <li>Measure page load time and identify the biggest bottleneck</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer style="text-align: center; padding: 2rem;">
+        <p>&copy; 2026 GlobalDev Roadmap</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community | GlobalDev Roadmap</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/community.css">
+</head>
+
+<body>
+    <header>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <img src="images/globaldev-icon.svg" alt="GlobalDev Logo" style="height: 60px; width: 60px;">
+            <h1>GlobalDev Roadmap</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="resources.html">Resources</a>
+            <a href="lean-developer.html">Lean Developer</a>
+            <a href="community.html" class="active">Community</a>
+            <a href="siteplan.html">Site Plan</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="community-hero">
+            <h1>Join the GlobalDev Community</h1>
+            <p>Share resources, ask questions, and help fellow developers on their journey to FAANG excellence</p>
+        </section>
+
+        <section class="community-content">
+            <article class="community-card">
+                <h2>Suggest a Resource</h2>
+                <p>Found an amazing learning resource? Help us build the ultimate developer roadmap by suggesting tools,
+                    courses, and communities you've found valuable.</p>
+                <form id="suggestion-form" class="resource-form">
+                    <div class="form-group">
+                        <label for="resource-name">Resource Name *</label>
+                        <input type="text" id="resource-name" name="resourceName" required
+                            placeholder="e.g., Codecademy Pro">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="institution">Institution/Organization *</label>
+                        <input type="text" id="institution" name="institution" required
+                            placeholder="e.g., Codecademy Inc.">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="field">Field of Study *</label>
+                        <select id="field" name="field" required>
+                            <option value="">-- Select a Field --</option>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Data Science & AI">Data Science & AI</option>
+                            <option value="AI & Machine Learning">AI & Machine Learning</option>
+                            <option value="DevOps & Systems">DevOps & Systems</option>
+                            <option value="Mobile Development">Mobile Development</option>
+                            <option value="Cloud Computing">Cloud Computing</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="difficulty">Difficulty Level *</label>
+                            <select id="difficulty" name="difficulty" required>
+                                <option value="">-- Select Level --</option>
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Advanced">Advanced</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="region">Region *</label>
+                            <select id="region" name="region" required>
+                                <option value="">-- Select Region --</option>
+                                <option value="International Remote">International Remote</option>
+                                <option value="South Africa Local">South Africa Local</option>
+                                <option value="Both">Both</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="url">Resource URL *</label>
+                        <input type="url" id="url" name="url" required placeholder="https://example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description *</label>
+                        <textarea id="description" name="description" required
+                            placeholder="Why do you recommend this resource? What makes it valuable?"
+                            rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="agree" name="agree" required>
+                        <label for="agree">I agree that my suggestion can be reviewed and potentially added to the
+                            platform</label>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Submit Suggestion</button>
+                    <button type="reset" class="btn-reset">Clear Form</button>
+                </form>
+                <div id="form-message" class="form-message" style="display: none;"></div>
+            </article>
+
+            <article class="community-card">
+                <h2>Community Guidelines</h2>
+                <ul>
+                    <li><strong>Be Respectful:</strong> Treat all community members with courtesy and professionalism
+                    </li>
+                    <li><strong>Be Helpful:</strong> Share knowledge freely and help others succeed</li>
+                    <li><strong>Stay On Topic:</strong> Keep discussions focused on software development and learning
+                    </li>
+                    <li><strong>Share Resources:</strong> Suggest free or high-value resources that benefit developers
+                        at all levels</li>
+                    <li><strong>Report Issues:</strong> If you find broken links or inaccurate information, let us know
+                    </li>
+                    <li><strong>No Spam:</strong> Avoid promotional content and self-serving advertising</li>
+                </ul>
+            </article>
+
+            <article class="community-card">
+                <h2>Featured Success Stories</h2>
+                <div class="success-story">
+                    <h3>From Intern to Senior Engineer</h3>
+                    <p><em>- Nomsa, Cape Town</em></p>
+                    <p>"Using the GlobalDev Roadmap's curated resources, I went from tutorial-following to building
+                        production systems in 18 months. The Lean Developer principles changed how I approach code."</p>
+                </div>
+                <div class="success-story">
+                    <h3>Landing My First FAANG Role</h3>
+                    <p><em>- Themba, Johannesburg</em></p>
+                    <p>"The Harvard CS50 + algorithm practice combination prepared me for Google interviews. This
+                        roadmap is gold for South African developers."</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="contact-section">
+            <h2>Have Questions?</h2>
+            <p>For general inquiries, technical support, or partnership opportunities, reach out:</p>
+            <ul>
+                <li><strong>Email:</strong> info@globaldev-roadmap.com</li>
+                <li><strong>GitHub:</strong> github.com/globaldev-roadmap</li>
+                <li><strong>Discord:</strong> Join our community server for real-time discussions</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer style="text-align: center; padding: 2rem;">
+        <p>&copy; 2026 GlobalDev Roadmap</p>
+    </footer>
+
+    <script src="scripts/community.js"></script>
+</body>
+
+</html>
