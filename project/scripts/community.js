@@ -1,3 +1,9 @@
+/*
+ GlobalDev Roadmap
+ Author: Sizwe Arthur Nkosi
+ Purpose: Client-side form handling, validation, and localStorage persistence
+*/
+
 // Community form handling
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('suggestion-form');
@@ -6,6 +12,12 @@ document.addEventListener('DOMContentLoaded', function () {
     if (form) {
         form.addEventListener('submit', function (e) {
             e.preventDefault();
+
+            if (!validateForm(form)) {
+                showMessage('Please fill in all required fields.', 'error');
+                return;
+            }
+
 
             // Get form data
             const formData = new FormData(form);
@@ -32,7 +44,11 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             // Show personalized success message
-            showMessage(`Thank you for your suggestion! We've recorded it under: ${suggestion.email || 'your email'}.`, 'success');
+            showMessage(
+                `Thank you for your suggestion! We've recorded it${suggestion.email ? ` under ${suggestion.email}` : ''}.`,
+                'success'
+            );
+
 
             // Reset form
             form.reset();

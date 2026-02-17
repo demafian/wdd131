@@ -20,7 +20,7 @@
         </div>
         <nav role="navigation">
             <a href="index.html">Home</a>
-            <a href="resources.html" class="active">Resources</a>
+            <a href="resources.html">Resources</a>
             <a href="lean-developer.html">Lean Developer</a>
             <a href="community.html">Community</a>
             <a href="about-us.html">About Us</a>
@@ -29,11 +29,11 @@
 
     <main class="container">
         <section class="filter-section">
-            <h2>Find Your Learning Path</h2>
+            <h2 id="resources-heading" class="sr-only">Learning Resources</h2>
             <div class="filter-controls">
                 <div class="filter-group">
                     <label for="field-filter">Field:</label>
-                    <select id="field-filter">
+                    <select id="field-filter" aria-label="Filter by field">
                         <option value="">All Fields</option>
                         <option value="Computer Science">Computer Science</option>
                         <option value="Web Development">Web Development</option>
@@ -45,7 +45,7 @@
 
                 <div class="filter-group">
                     <label for="difficulty-filter">Difficulty:</label>
-                    <select id="difficulty-filter">
+                    <select id="difficulty-filter" aria-label="Filter by difficulty">
                         <option value="">All Levels</option>
                         <option value="Beginner">Beginner</option>
                         <option value="Intermediate">Intermediate</option>
@@ -55,7 +55,7 @@
 
                 <div class="filter-group">
                     <label for="region-filter">Region:</label>
-                    <select id="region-filter">
+                    <select id="region-filter" aria-label="Filter by region">
                         <option value="">All Regions</option>
                         <option value="Both">Both (Local + International)</option>
                         <option value="International Remote">International Remote</option>
@@ -70,8 +70,7 @@
         </section>
 
         <section class="resources-section">
-            <div id="resource-grid" class="resource-grid">
-            </div>
+            <div id="resource-grid" class="resource-grid"></div>
         </section>
     </main>
 

@@ -16,12 +16,13 @@
     <header>
         <div class="header-container">
             <img class="site-logo" src="images/globaldev-icon.svg" alt="GlobalDev Logo">
+            <h1 class="sr-only">GlobalDev Roadmap</h1>
         </div>
         <nav role="navigation">
             <a href="index.html">Home</a>
             <a href="resources.html">Resources</a>
             <a href="lean-developer.html">Lean Developer</a>
-            <a href="community.html" class="active">Community</a>
+            <a href="community.html">Community</a>
             <a href="about-us.html">About Us</a>
         </nav>
     </header>
@@ -37,7 +38,8 @@
                 <h2>Suggest a Resource</h2>
                 <p>Found an amazing learning resource? Help us build the ultimate developer roadmap by suggesting tools,
                     courses, and communities you've found valuable.</p>
-                <form id="suggestion-form" class="resource-form">
+
+                <form id="suggestion-form" class="suggestion-form">
                     <div class="form-group">
                         <label for="resource-name">Resource Name *</label>
                         <input type="text" id="resource-name" name="resourceName" required
@@ -111,11 +113,11 @@
                     </div>
 
                     <div class="form-actions">
-                        <button type="submit" class="btn-submit">Submit Suggestion</button>
+                        <button type="submit" class="btn-cta">Submit Resource</button>
                         <button type="reset" class="btn-reset">Clear Form</button>
                     </div>
                 </form>
-                <div id="form-message" class="form-message"></div>
+                <div id="form-message" class="form-message" style="display: none;"></div>
             </article>
 
             <article class="community-card">

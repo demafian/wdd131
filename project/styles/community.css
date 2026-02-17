@@ -50,10 +50,10 @@ header nav a.active {
 }
 
 .community-card {
-    background: white;
+    background: var(--text-light);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .community-card h2 {
@@ -252,6 +252,7 @@ header nav a.active {
 }
 
 /* RESPONSIVE */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .form-row {
         grid-template-columns: 1fr;
@@ -266,5 +267,32 @@ header nav a.active {
 
     .community-hero h1 {
         font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .community-content {
+        /* Sets up a 3-column grid */
+        grid-template-columns: repeat(3, 1fr);
+        align-items: start;
+        padding-bottom: 2rem;
+    }
+
+    /* Make the "Suggest a Resource" form wider (2 columns) */
+    .community-card:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 2;
+        /* Form takes the left 2/3 and can grow vertically */
+    }
+
+    /* Force the other cards into the sidebar (3rd column) */
+    .community-card:nth-child(2),
+    .community-card:nth-child(3) {
+        grid-column: 3;
+    }
+
+    /* Add spacing between the two sidebar cards */
+    .community-card:nth-child(2) {
+        margin-bottom: 2rem;
     }
 }

@@ -1,6 +1,9 @@
-/* GLOBALDEV ROADMAP - RESOURCE DATA
-   Assets provided for Harvard, Google, IBM, FreeCodeCamp, MIT, Coursera, Udacity, Khan Academy
+/*
+ GlobalDev Roadmap
+ Author: Sizwe Arthur Nkosi
+ Purpose: Client-side form handling, validation, and localStorage persistence
 */
+
 
 const resources = [
     {
