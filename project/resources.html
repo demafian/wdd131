@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources | GlobalDev Roadmap</title>
+    <meta name="description"
+        content="Explore curated learning paths, from Computer Science to DevOps, optimized for South African developers.">
+    <meta name="author" content="Sizwe Athur Nkosi">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/resources.css">
 </head>
 
 <body>
     <header>
-        <div style="display: flex; align-items: center; gap: 15px;">
-            <img src="images/globaldev-icon.svg" alt="GlobalDev Logo" style="height: 60px; width: 60px;">
+        <div class="header-container">
+            <img class="site-logo" src="images/globaldev-icon.svg" alt="GlobalDev Logo">
             <h1>GlobalDev Roadmap</h1>
         </div>
-        <nav>
+        <nav role="navigation">
             <a href="index.html">Home</a>
             <a href="resources.html" class="active">Resources</a>
             <a href="lean-developer.html">Lean Developer</a>
@@ -59,19 +62,20 @@
                     </select>
                 </div>
 
-                <button class="btn-reset" onclick="resetFilters()">Reset Filters</button>
-                <button class="btn-saved" onclick="viewSavedResources()">View Saved</button>
+                <div class="filter-actions">
+                    <button class="btn-reset" id="reset-btn">Reset Filters</button>
+                    <button class="btn-saved" id="view-saved-btn">View Saved</button>
+                </div>
             </div>
         </section>
 
         <section class="resources-section">
             <div id="resource-grid" class="resource-grid">
-                <!-- Resources will be dynamically loaded here -->
             </div>
         </section>
     </main>
 
-    <footer style="text-align: center; padding: 2rem;">
+    <footer class="main-footer">
         <p>&copy; 2026 GlobalDev Roadmap</p>
         <p>
             <a href="references.html">References & Image Credits</a> |
@@ -81,40 +85,45 @@
 
     <script src="scripts/resources.js"></script>
     <script>
-        // Initialize filters
+        // DOM Element references
         const fieldSelect = document.getElementById('field-filter');
         const difficultySelect = document.getElementById('difficulty-filter');
         const regionSelect = document.getElementById('region-filter');
+        const resetBtn = document.getElementById('reset-btn');
+        const savedBtn = document.getElementById('view-saved-btn');
 
-        // Load initial resources
-        displayResources();
+        // Initial Load
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof displayResources === "function") {
+                displayResources();
+            }
+        });
 
-        // Add event listeners for filtering
-        fieldSelect.addEventListener('change', applyFilters);
-        difficultySelect.addEventListener('change', applyFilters);
-        regionSelect.addEventListener('change', applyFilters);
+        // Filtering Events
+        const controls = [fieldSelect, difficultySelect, regionSelect];
+        controls.forEach(control => {
+            control.addEventListener('change', () => {
+                const field = fieldSelect.value || null;
+                const difficulty = difficultySelect.value || null;
+                const region = regionSelect.value || null;
+                const filtered = filterResources(field, difficulty, region);
+                displayResources(filtered);
+            });
+        });
 
-        function applyFilters() {
-            const field = fieldSelect.value || null;
-            const difficulty = difficultySelect.value || null;
-            const region = regionSelect.value || null;
-
-            const filtered = filterResources(field, difficulty, region);
-            displayResources(filtered);
-        }
-
-        function resetFilters() {
+        // Action Events
+        resetBtn.addEventListener('click', () => {
             fieldSelect.value = '';
             difficultySelect.value = '';
             regionSelect.value = '';
             displayResources();
-        }
+        });
 
-        function viewSavedResources() {
+        savedBtn.addEventListener('click', () => {
             const saved = getSavedResources();
             displayResources(saved);
-            alert('Displaying your saved resources. To see all resources, click "Reset Filters".');
-        }
+            alert('Displaying your saved resources. To see all, click "Reset Filters".');
+        });
     </script>
 </body>
 

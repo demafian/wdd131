@@ -7,15 +7,15 @@
     <title>Community | GlobalDev Roadmap</title>
     <meta name="description"
         content="Join the GlobalDev community: suggest resources, read success stories, and collaborate with fellow developers across South Africa.">
+    <meta name="author" content="Sizwe Athur Nkosi">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/community.css">
 </head>
 
 <body>
     <header>
-        <div style="display: flex; align-items: center; gap: 15px;">
+        <div class="header-container">
             <img class="site-logo" src="images/globaldev-icon.svg" alt="GlobalDev Logo">
-
         </div>
         <nav role="navigation">
             <a href="index.html">Home</a>
@@ -110,10 +110,12 @@
                             platform</label>
                     </div>
 
-                    <button type="submit" class="btn-submit">Submit Suggestion</button>
-                    <button type="reset" class="btn-reset">Clear Form</button>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit">Submit Suggestion</button>
+                        <button type="reset" class="btn-reset">Clear Form</button>
+                    </div>
                 </form>
-                <div id="form-message" class="form-message" style="display: none;"></div>
+                <div id="form-message" class="form-message"></div>
             </article>
 
             <article class="community-card">
@@ -152,7 +154,7 @@
         <section class="contact-section">
             <h2>Have Questions?</h2>
             <p>For general inquiries, technical support, or partnership opportunities, reach out:</p>
-            <ul>
+            <ul class="contact-list">
                 <li><strong>Email:</strong> info@globaldev-roadmap.com</li>
                 <li><strong>GitHub:</strong> github.com/globaldev-roadmap</li>
                 <li><strong>Discord:</strong> Join our community server for real-time discussions</li>
@@ -160,7 +162,7 @@
         </section>
     </main>
 
-    <footer style="text-align: center; padding: 2rem;">
+    <footer class="main-footer">
         <p>&copy; 2026 GlobalDev Roadmap</p>
         <p>
             <a href="references.html">References & Image Credits</a> |
