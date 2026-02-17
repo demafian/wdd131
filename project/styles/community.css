@@ -134,7 +134,10 @@ header nav a.active {
 
 .btn-submit {
     background-color: var(--color-accent);
-    color: white;
+    /* #FF4D00 */
+    color: #FFFFFF;
+    /* Ensure this is pure white */
+    font-weight: bold;
 }
 
 .btn-submit:hover {
@@ -244,7 +247,8 @@ header nav a.active {
 }
 
 .contact-section strong {
-    color: var(--color-accent);
+    color: #000000;
+    /* Use pure black for maximum contrast */
 }
 
 /* RESPONSIVE */
