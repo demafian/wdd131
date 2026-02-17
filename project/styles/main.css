@@ -193,7 +193,8 @@ footer {
 }
 
 .hero-subtext {
-    color: #E0E0E0;
+    color: white;
+    /* increase contrast per Lighthouse recommendation */
     font-size: 1rem !important;
     margin-top: 1rem !important;
 }
@@ -286,7 +287,8 @@ footer {
 }
 
 .feature-card p {
-    color: #666;
+    color: #333;
+    /* darker for better contrast */
     line-height: 1.6;
 }
 
@@ -357,7 +359,8 @@ footer {
     padding: 0 1.5rem;
     font-size: 0.95rem;
     line-height: 1.5;
-    color: #666;
+    color: #333;
+    /* improved contrast */
 }
 
 .spotlight-card .tags {
@@ -434,7 +437,8 @@ footer {
 }
 
 .principle-preview p {
-    color: #666;
+    color: #333;
+    /* improve readability */
     font-size: 0.95rem;
     line-height: 1.5;
     margin: 0;
@@ -521,6 +525,19 @@ footer,
 footer p,
 footer a {
     font-weight: 700;
+}
+
+/* Utility for screen-reader only text */
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
 }
 
 /* Footer background + accessible link color */

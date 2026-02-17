@@ -207,7 +207,7 @@ header nav a.active {
 }
 
 .success-story em {
-    color: #666;
+    color: var(--text-dark);
     font-size: 0.9rem;
 }
 
