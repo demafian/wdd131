@@ -12,7 +12,7 @@
 <body>
     <header>
         <div style="display: flex; align-items: center; gap: 15px;">
-            <img src="images/globaldev-icon.svg" alt="GlobalDev Logo" style="height: 60px; width: 60px;">
+            <img class="site-logo" src="images/globaldev-icon.svg" alt="GlobalDev Logo">
             <h1>GlobalDev Roadmap</h1>
         </div>
         <nav>
@@ -20,12 +20,12 @@
             <a href="resources.html">Resources</a>
             <a href="lean-developer.html" class="active">Lean Developer</a>
             <a href="community.html">Community</a>
-            <a href="siteplan.html">Site Plan</a>
+            <a href="about-us.html">About Us</a>
         </nav>
     </header>
 
     <main class="container">
-        <section class="hero-section">
+        <section class="lean-hero">
             <h1>The Lean Developer Guide</h1>
             <p>Essential principles for high-efficiency coding in any environment</p>
             <p class="subtitle">For developers in resource-constrained regions and teams optimizing for speed and
@@ -44,13 +44,15 @@
                     <li>Choose appropriate data structures (arrays vs linked lists vs hashmaps)</li>
                     <li>Profile code bottlenecks before premature optimization</li>
                 </ul>
-                <code>// Good: O(n) - single pass
-for (const item of items) { process(item); }
+                <code>
+    // Good: O(n) - single pass
+    for (const item of items) { process(item); }
 
-// Bad: O(n²) - nested iteration
-for (const item of items) {
-    for (const other of items) { compare(item, other); }
-}</code>
+    // Bad: O(n²) - nested iteration
+    for (const item of items) {
+        for (const other of items) { compare(item, other); }
+    }
+</code>
             </article>
 
             <article class="principle-card">
@@ -62,13 +64,15 @@ for (const item of items) {
                     <li>Cache intelligently on the client and server</li>
                     <li>Use pagination and lazy loading for large datasets</li>
                 </ul>
-                <code>// Good: Single request with pagination
-fetch('/api/users?page=1&limit=10')
+                <code>
+    // Good: Single request with pagination
+    fetch('/api/users?page=1&limit=10')
 
-// Bad: Multiple requests
-for (let i = 1; i <= 100; i++) {
-    fetch(`/api/users/${i}`);
-}</code>
+    // Bad: Multiple requests
+    for (let i = 1; i <= 100; i++) {
+        fetch(`/api/users/${i}`);
+    }
+</code>
             </article>
 
             <article class="principle-card">
@@ -80,15 +84,17 @@ for (let i = 1; i <= 100; i++) {
                     <li>Document complex logic and edge cases</li>
                     <li>Follow consistent code style and patterns</li>
                 </ul>
-                <code>// Good: Clear intent
-function calculateMonthlyInterest(principal, annualRate) {
-    return (principal * annualRate) / 12 / 100;
-}
+                <code>
+    // Good: Clear intent
+    function calculateMonthlyInterest(principal, annualRate) {
+        return (principal * annualRate) / 12 / 100;
+    }
 
-// Bad: Unclear
-function calc(p, r) {
-    return (p * r) / 12 / 100;
-}</code>
+    // Bad: Unclear
+    function calc(p, r) {
+        return (p * r) / 12 / 100;
+    }
+</code>
             </article>
 
             <article class="principle-card">
@@ -100,11 +106,13 @@ function calc(p, r) {
                     <li>Use branches for features and fixes</li>
                     <li>Document deployment procedures</li>
                 </ul>
-                <code>// Test critical logic thoroughly
-function test_calculateMonthlyInterest() {
-    assert(calculateMonthlyInterest(1000, 12) === 10);
-    assert(calculateMonthlyInterest(0, 5) === 0);
-}</code>
+                <code>
+    // Test critical logic thoroughly
+    function test_calculateMonthlyInterest() {
+        assert(calculateMonthlyInterest(1000, 12) === 10);
+        assert(calculateMonthlyInterest(0, 5) === 0);
+    }
+</code>
             </article>
 
             <article class="principle-card">
@@ -116,11 +124,13 @@ function test_calculateMonthlyInterest() {
                     <li>Minimize dependencies; audit what you import</li>
                     <li>Consider compiled languages (Go, Rust) for performance-critical services</li>
                 </ul>
-                <code>// Good: Minimal dependencies
-<script src="scripts/app.js"></script>
+                <code>
+    // Good: Minimal dependencies
+    <script src="scripts/app.js"></script>
 
-// Potentially Excessive
-<script src="node_modules/framework/dist/full.min.js"></script></code>
+    // Potentially Excessive
+    <script src="node_modules/framework/dist/full.min.js"></script>
+</code>
             </article>
 
             <article class="principle-card">
@@ -132,11 +142,13 @@ function test_calculateMonthlyInterest() {
                     <li>Minify and compress assets</li>
                     <li>Test on slow networks and older devices</li>
                 </ul>
-                <code>// Good: Lazy load images
-<img src="placeholder.jpg" data-src="full.jpg" loading="lazy" alt="Description">
+                <code>
+    // Good: Lazy load images
+    <img src="placeholder.jpg" data-src="full.jpg" loading="lazy" alt="Description">
 
-// Tree-friendly: CDN with compression
-<link rel="preconnect" href="https://cdn.example.com"></code>
+    // Tree-friendly: CDN with compression
+    <link rel="preconnect" href="https://cdn.example.com">
+</code>
             </article>
 
             <article class="principle-card">
@@ -148,10 +160,12 @@ function test_calculateMonthlyInterest() {
                     <li>Track user behavior to identify bottlenecks</li>
                     <li>Set performance budgets and track against them</li>
                 </ul>
-                <code>// Good: Performance monitoring
-console.time('fetchData');
-const data = await fetchUserData();
-console.timeEnd('fetchData'); // Logs elapsed time</code>
+                <code>
+    // Good: Performance monitoring
+    console.time('fetchData');
+    const data = await fetchUserData();
+    console.timeEnd('fetchData'); // Logs elapsed time
+</code>
             </article>
         </section>
 
@@ -181,6 +195,7 @@ console.timeEnd('fetchData'); // Logs elapsed time</code>
 
     <footer style="text-align: center; padding: 2rem;">
         <p>&copy; 2026 GlobalDev Roadmap</p>
+        <p><a href="references.html">References &amp; Image Credits</a></p>
     </footer>
 </body>
 

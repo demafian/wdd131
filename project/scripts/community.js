@@ -21,12 +21,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 submittedDate: new Date().toISOString()
             };
 
+
             // In a real application, this would send to a server
             // For now, we'll save it to localStorage as a demonstration
             saveSuggestion(suggestion);
 
-            // Show success message
-            showMessage('Thank you for your suggestion! We\'ll review it and get back to you soon.', 'success');
+            // Save contributor identifier for later display
+            if (suggestion.email) {
+                localStorage.setItem('lastContributor', suggestion.email);
+            }
+
+            // Show personalized success message
+            showMessage(`Thank you for your suggestion! We've recorded it under: ${suggestion.email || 'your email'}.`, 'success');
 
             // Reset form
             form.reset();
@@ -41,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function saveSuggestion(suggestion) {
     // Get existing suggestions from localStorage
-    let suggestions = JSON.parse(localStorage.getItem('communityS uggestions')) || [];
+    let suggestions = JSON.parse(localStorage.getItem('communitySuggestions')) || [];
 
     // Add new suggestion
     suggestions.push(suggestion);

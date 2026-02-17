@@ -1,6 +1,8 @@
-// Resource data structure
+/* GLOBALDEV ROADMAP - RESOURCE DATA
+   Assets provided for Harvard, Google, IBM, FreeCodeCamp, MIT, Coursera, Udacity, Khan Academy
+*/
+
 const resources = [
-    // Harvard CS50
     {
         id: 1,
         name: "Harvard CS50",
@@ -8,12 +10,11 @@ const resources = [
         field: "Computer Science",
         difficulty: "Intermediate",
         region: "International Remote",
-        description: "The gold standard for Computer Science fundamentals. Covers algorithms, data structures, and core CS principles.",
+        description: "The gold standard for Computer Science fundamentals. Covers algorithms and core CS principles.",
         url: "https://cs50.harvard.edu",
-        image: "images/alexander-sinn-unsplash.jpg",
+        image: "https://pll.harvard.edu/sites/default/files/styles/16_9_large/public/course/CS50x_pll.png?itok=AxciDjWM",
         efficiency: "High - Rigorous algorithm focus"
     },
-    // Google DevOps
     {
         id: 2,
         name: "Google DevOps",
@@ -21,12 +22,11 @@ const resources = [
         field: "DevOps & Systems",
         difficulty: "Advanced",
         region: "International Remote",
-        description: "Professional automation and systems engineering. Learn infrastructure, CI/CD pipelines, and cloud deployment.",
+        description: "Professional automation and systems engineering. Learn CI/CD pipelines and cloud deployment.",
         url: "https://cloud.google.com/training",
-        image: "images/marvin-meyer-unsplash.jpg",
-        efficiency: "High - Optimized for production environments"
+        image: "https://media.licdn.com/dms/image/sync/v2/D4E27AQEaUBol2YpQMQ/articleshare-shrink_800/B4EZtzxgzrGoAI-/0/1767173918274?e=2147483647&v=beta&t=4cJdn7Ujt9CiyKZUdvSF_3WoAzPKuCg5OOEC4aPKJIc",
+        efficiency: "High - Optimized for production"
     },
-    // IBM Data Science
     {
         id: 3,
         name: "IBM Data Science",
@@ -36,23 +36,21 @@ const resources = [
         region: "International Remote",
         description: "Mastering data-driven decision making. Covers Python, machine learning, and data analysis.",
         url: "https://www.ibm.com/training",
-        image: "images/alina-grubnyak-unsplash.jpg",
-        efficiency: "High - Practical data engineering skills"
+        image: "https://raw.githubusercontent.com/roshangrewal/IBM-Data-Science-Professional-Certification/master/IBM-Banner.png",
+        efficiency: "High - Practical data engineering"
     },
-    // FreeCodeCamp Web Dev
     {
         id: 4,
-        name: "FreeCodeCamp Web Development",
+        name: "FreeCodeCamp",
         institution: "FreeCodeCamp",
         field: "Web Development",
         difficulty: "Beginner",
         region: "International Remote",
-        description: "Complete web development curriculum covering HTML, CSS, JavaScript, React, and backend technologies.",
+        description: "Complete web development curriculum covering HTML, CSS, JavaScript, and React.",
         url: "https://www.freecodecamp.org",
-        image: "images/walkator-unsplash.jpg",
+        image: "https://i.pcmag.com/imagery/reviews/01tPXClg2WjLamQzScplH3y-15..v1627670281.png",
         efficiency: "High - Project-based learning"
     },
-    // MIT OpenCourseWare
     {
         id: 5,
         name: "MIT OpenCourseWare",
@@ -60,132 +58,111 @@ const resources = [
         field: "Computer Science",
         difficulty: "Advanced",
         region: "International Remote",
-        description: "Free access to MIT course materials including algorithms, mathematics, and advanced CS topics.",
+        description: "Free access to MIT materials including algorithms and advanced CS topics.",
         url: "https://ocw.mit.edu",
-        image: "images/alex-kotliarskyi-unsplash.jpg",
+        image: "https://massworld.news/wp-content/uploads/2023/02/MIT-Logo.png",
         efficiency: "Very High - University-grade rigor"
     },
-    // Coursera AI Specialization
     {
         id: 6,
-        name: "Coursera AI Specialization",
-        institution: "Coursera / Stanford",
+        name: "Coursera AI",
+        institution: "Stanford",
         field: "AI & Machine Learning",
         difficulty: "Advanced",
         region: "International Remote",
-        description: "Comprehensive AI and machine learning specialization. Covers neural networks, deep learning, and practical applications.",
+        description: "Comprehensive AI specialization covering neural networks and deep learning.",
         url: "https://www.coursera.org",
-        image: "images/andrea-de-santis-unsplash.jpg",
-        efficiency: "High - Industry-standard AI concepts"
+        image: "https://www.aidoos.com/media/aidoos_product/Coursera.png",
+        efficiency: "High - Industry-standard concepts"
     },
-    // Udacity Nanodegree
     {
         id: 7,
-        name: "Udacity Nanodegree Programs",
+        name: "Udacity Nanodegree",
         institution: "Udacity",
         field: "Web Development",
         difficulty: "Intermediate",
         region: "International Remote",
-        description: "Career-focused nanodegrees in web development, mobile development, and cloud computing.",
+        description: "Career-focused programs in mobile development and cloud computing.",
         url: "https://www.udacity.com",
-        image: "images/hoi-an-and-da-nang-photographer-unsplash.jpg",
+        image: "https://miro.medium.com/1*c0CdMMI9iCGeghAgO2cq5A.png",
         efficiency: "High - Industry partnerships"
     },
-    // Khan Academy
     {
         id: 8,
-        name: "Khan Academy Computer Science",
+        name: "Khan Academy",
         institution: "Khan Academy",
         field: "Computer Science",
         difficulty: "Beginner",
         region: "Both",
-        description: "Free foundational computer science and programming courses. Great starting point for beginners.",
+        description: "Free foundational programming courses. Great low-bandwidth starting point.",
         url: "https://www.khanacademy.org",
-        image: "images/pexels-cottonbro.jpg",
-        efficiency: "High - Low bandwidth option available"
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UU6QIUKZWMnX3tkSG6hxT4xmgKKEmhtmcA&s",
+        efficiency: "High - Low bandwidth optimized"
     }
 ];
 
-// Filtering functions
-function filterResources(field = null, difficulty = null, region = null) {
-    return resources.filter(resource => {
-        const fieldMatch = !field || resource.field === field;
-        const difficultyMatch = !difficulty || resource.difficulty === difficulty;
-        const regionMatch = !region || resource.region === region;
-        return fieldMatch && difficultyMatch && regionMatch;
-    });
-}
-
-// Get unique values for filters
-function getUniqueFields() {
-    return [...new Set(resources.map(r => r.field))];
-}
-
-function getUniqueDifficulties() {
-    return [...new Set(resources.map(r => r.difficulty))];
-}
-
-function getUniqueRegions() {
-    return [...new Set(resources.map(r => r.region))];
-}
-
-// Display resources in the DOM
+// Core Display Logic
 function displayResources(resourcesToDisplay = resources, containerId = 'resource-grid') {
     const container = document.getElementById(containerId);
     if (!container) return;
 
     container.innerHTML = '';
+    const savedIds = JSON.parse(localStorage.getItem('savedResources')) || [];
 
     if (resourcesToDisplay.length === 0) {
-        container.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; padding: 2rem;">No resources match your criteria.</p>';
+        container.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; padding: 2rem;">No resources found matching your filters.</p>';
         return;
     }
 
     resourcesToDisplay.forEach(resource => {
-        const card = document.createElement('div');
+        const isSaved = savedIds.includes(resource.id);
+        const card = document.createElement('article');
         card.className = 'resource-card';
         card.innerHTML = `
             <div class="card-header">
-                <img src="${resource.image}" alt="${resource.name}" class="resource-icon">
+                <img src="${resource.image}" alt="${resource.name}" class="resource-icon" loading="lazy" decoding="async" style="object-fit: contain; background: #fff; padding: 5px; border-radius: 4px;">
                 <h3>${resource.name}</h3>
             </div>
             <p class="institution"><strong>${resource.institution}</strong></p>
             <div class="tags">
                 <span class="tag tag-field">${resource.field}</span>
                 <span class="tag tag-difficulty">${resource.difficulty}</span>
-                <span class="tag tag-region">${resource.region}</span>
             </div>
             <p class="description">${resource.description}</p>
-            <p class="efficiency"><strong>Efficiency:</strong> ${resource.efficiency}</p>
-            <a href="${resource.url}" target="_blank" class="btn-resource">Visit Resource</a>
-            <button class="btn-save" onclick="saveForLater(${resource.id})">Save for Later</button>
+            <div class="card-actions">
+                <a href="${resource.url}" target="_blank" rel="noopener noreferrer" class="btn-resource">Visit Resource</a>
+                ${isSaved
+                ? `<button class="btn-reset" onclick="handleRemove(${resource.id})">Remove</button>`
+                : `<button class="btn-save" onclick="handleSave(${resource.id})">Save</button>`
+            }
+            </div>
         `;
         container.appendChild(card);
     });
 }
 
-// Save for Later functionality using localStorage
-function saveForLater(resourceId) {
+// State Management
+function handleSave(id) {
     let saved = JSON.parse(localStorage.getItem('savedResources')) || [];
-
-    if (!saved.includes(resourceId)) {
-        saved.push(resourceId);
+    if (!saved.includes(id)) {
+        saved.push(id);
         localStorage.setItem('savedResources', JSON.stringify(saved));
-        alert('Resource saved for later!');
-    } else {
-        alert('This resource is already in your saved list.');
+        displayResources();
     }
 }
 
-// Get saved resources
-function getSavedResources() {
-    const savedIds = JSON.parse(localStorage.getItem('savedResources')) || [];
-    return resources.filter(r => savedIds.includes(r.id));
+function handleRemove(id) {
+    let saved = JSON.parse(localStorage.getItem('savedResources')) || [];
+    saved = saved.filter(savedId => savedId !== id);
+    localStorage.setItem('savedResources', JSON.stringify(saved));
+    displayResources();
 }
 
-// Remove from saved
-function removeSavedResource(resourceId) {
-    let saved = JSON.parse(localStorage.getItem('savedResources')) || [];
-    saved = saved.filter(id => id !== resourceId);
-    localStorage.setItem('savedResources', JSON.stringify(saved));
+// Filter Logic helper
+function filterResources(field, difficulty, region) {
+    return resources.filter(r => {
+        return (!field || r.field === field) &&
+            (!difficulty || r.difficulty === difficulty) &&
+            (!region || r.region === region);
+    });
 }

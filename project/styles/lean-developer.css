@@ -33,9 +33,14 @@ header nav a.active {
 }
 
 .hero-section h1 {
-    color: white;
+    color: var(--color-accent);
     font-size: 2.5rem;
     margin: 0 0 1rem 0;
+}
+
+/* Ensure lean-hero heading matches other pages (white) */
+.lean-hero h1 {
+    color: white;
 }
 
 .hero-section .subtitle {
@@ -59,9 +64,16 @@ header nav a.active {
 }
 
 .principle-card h3 {
-    color: var(--color-secondary);
+    color: var(--color-accent);
     font-size: 1.4rem;
     margin-top: 0;
+}
+
+/* Section headings use the brand accent */
+.principle-section h2,
+.resources-section h2,
+.practice-section h2 {
+    color: var(--color-accent);
 }
 
 .principle-card ul {
