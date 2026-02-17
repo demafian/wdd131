@@ -165,12 +165,15 @@ footer {
     background-color: #E63E00;
 }
 
-/* HOME PAGE SECTIONS */
+/* 1. HOME HERO */
 .hero-banner {
-    /* dark overlay + local AVIF/WebP hero image for readability */
-    background: linear-gradient(rgba(27, 38, 59, 0.8), rgba(27, 38, 59, 0.8)),
-        -webkit-image-set(url('../images/index.avif') type('image/avif') 1x, url('../images/index.webp') type('image/webp') 1x);
-    background-image: linear-gradient(rgba(27, 38, 59, 0.8), rgba(27, 38, 59, 0.8)), image-set(url('../images/index.avif') type('image/avif') 1x, url('../images/index.webp') type('image/webp') 1x, url('../images/index.webp') 1x);
+    /* Fallback: Validator sees this and is happy */
+    background-image: linear-gradient(rgba(27, 38, 59, 0.8), rgba(27, 38, 59, 0.8)), url('../images/index.webp');
+
+    /* Modern: Browsers that support image-set will use this instead */
+    background-image: linear-gradient(rgba(27, 38, 59, 0.8), rgba(27, 38, 59, 0.8)), -webkit-image-set(url("../images/index.avif") type("image/avif"), url("../images/index.webp") type("image/webp"));
+    background-image: linear-gradient(rgba(27, 38, 59, 0.8), rgba(27, 38, 59, 0.8)), image-set(url("../images/index.avif") type("image/avif"), url("../images/index.webp") type("image/webp"));
+
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -199,12 +202,15 @@ footer {
     margin-top: 1rem !important;
 }
 
-/* Community page hero */
+/* 2. COMMUNITY HERO */
 .community-hero {
-    /* community hero uses a local coding image (AVIF/WebP) with overlay */
-    background: linear-gradient(rgba(27, 38, 59, 0.8), rgba(27, 38, 59, 0.8)),
-        -webkit-image-set(url('../images/coding.avif') type('image/avif') 1x, url('../images/coding.webp') type('image/webp') 1x);
-    background-image: linear-gradient(rgba(27, 38, 59, 0.8), rgba(27, 38, 59, 0.8)), image-set(url('../images/coding.avif') type('image/avif') 1x, url('../images/coding.webp') type('image/webp') 1x, url('../images/coding.webp') 1x);
+    /* Fallback */
+    background-image: linear-gradient(rgba(27, 38, 59, 0.8), rgba(27, 38, 59, 0.8)), url('../images/coding.webp');
+
+    /* Modern */
+    background-image: linear-gradient(rgba(27, 38, 59, 0.8), rgba(27, 38, 59, 0.8)), -webkit-image-set(url("../images/coding.avif") type("image/avif"), url("../images/coding.webp") type("image/webp"));
+    background-image: linear-gradient(rgba(27, 38, 59, 0.8), rgba(27, 38, 59, 0.8)), image-set(url("../images/coding.avif") type("image/avif"), url("../images/coding.webp") type("image/webp"));
+
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -215,12 +221,15 @@ footer {
     margin-bottom: 2rem;
 }
 
-/* Lean developer hero */
+/* 3. LEAN DEVELOPER HERO */
 .lean-hero {
-    /* lean developer hero uses a local lean-dev image (AVIF/WebP) with overlay */
-    background: linear-gradient(rgba(27, 38, 59, 0.8), rgba(27, 38, 59, 0.8)),
-        -webkit-image-set(url('../images/lean-dev.avif') type('image/avif') 1x, url('../images/lean-dev.webp') type('image/webp') 1x);
-    background-image: linear-gradient(rgba(27, 38, 59, 0.8), rgba(27, 38, 59, 0.8)), image-set(url('../images/lean-dev.avif') type('image/avif') 1x, url('../images/lean-dev.webp') type('image/webp') 1x, url('../images/lean-dev.webp') 1x);
+    /* Fallback */
+    background-image: linear-gradient(rgba(27, 38, 59, 0.8), rgba(27, 38, 59, 0.8)), url('../images/lean-dev.webp');
+
+    /* Modern */
+    background-image: linear-gradient(rgba(27, 38, 59, 0.8), rgba(27, 38, 59, 0.8)), -webkit-image-set(url("../images/lean-dev.avif") type("image/avif"), url("../images/lean-dev.webp") type("image/webp"));
+    background-image: linear-gradient(rgba(27, 38, 59, 0.8), rgba(27, 38, 59, 0.8)), image-set(url("../images/lean-dev.avif") type("image/avif"), url("../images/lean-dev.webp") type("image/webp"));
+
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
