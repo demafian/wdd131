@@ -7,7 +7,7 @@
     <title>Community | GlobalDev Roadmap</title>
     <meta name="description"
         content="Join the GlobalDev community: suggest resources, read success stories, and collaborate with fellow developers across South Africa.">
-    <meta name="author" content="Sizwe Athur Nkosi">
+    <meta name="author" content="Sizwe Arthur Nkosi">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Roboto:wght@400;500;700&display=swap"
@@ -28,7 +28,7 @@
             <a href="index.html">Home</a>
             <a href="resources.html">Resources</a>
             <a href="lean-developer.html">Lean Developer</a>
-            <a href="community.html">Community</a>
+            <a href="community.html" aria-current="page">Community</a>
             <a href="about-us.html">About Us</a>
         </nav>
     </header>
@@ -47,26 +47,26 @@
 
                 <form id="suggestion-form" class="suggestion-form" novalidate>
                     <div class="form-group">
-                        <label for="resource-name">Resource Name *</label>
+                        <label for="resource-name">Resource Name <span aria-hidden="true">*</span></label>
                         <input type="text" id="resource-name" name="resourceName" required
                             placeholder="e.g., Codecademy Pro" autocomplete="organization-title">
                     </div>
 
                     <div class="form-group">
-                        <label for="institution">Institution/Organization *</label>
+                        <label for="institution">Institution/Organization <span aria-hidden="true">*</span></label>
                         <input type="text" id="institution" name="institution" required
                             placeholder="e.g., Codecademy Inc." autocomplete="organization">
                     </div>
 
                     <div class="form-group">
-                        <label for="field">Field of Study *</label>
+                        <label for="field">Field of Study <span aria-hidden="true">*</span></label>
                         <select id="field" name="field" required>
                             <option value="">-- Select a Field --</option>
                             <option value="Computer Science">Computer Science</option>
                             <option value="Web Development">Web Development</option>
-                            <option value="Data Science & AI">Data Science & AI</option>
-                            <option value="AI & Machine Learning">AI & Machine Learning</option>
-                            <option value="DevOps & Systems">DevOps & Systems</option>
+                            <option value="Data Science & AI">Data Science &amp; AI</option>
+                            <option value="AI & Machine Learning">AI &amp; Machine Learning</option>
+                            <option value="DevOps & Systems">DevOps &amp; Systems</option>
                             <option value="Mobile Development">Mobile Development</option>
                             <option value="Cloud Computing">Cloud Computing</option>
                             <option value="Other">Other</option>
@@ -75,7 +75,7 @@
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="difficulty">Difficulty Level *</label>
+                            <label for="difficulty">Difficulty Level <span aria-hidden="true">*</span></label>
                             <select id="difficulty" name="difficulty" required>
                                 <option value="">-- Select Level --</option>
                                 <option value="Beginner">Beginner</option>
@@ -85,7 +85,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="region">Region *</label>
+                            <label for="region">Region <span aria-hidden="true">*</span></label>
                             <select id="region" name="region" required>
                                 <option value="">-- Select Region --</option>
                                 <option value="South Africa Local">South Africa Local</option>
@@ -96,20 +96,20 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="url">Resource URL *</label>
+                        <label for="url">Resource URL <span aria-hidden="true">*</span></label>
                         <input type="url" id="url" name="url" required placeholder="https://example.com"
                             autocomplete="url">
                     </div>
 
                     <div class="form-group">
-                        <label for="description">Description *</label>
+                        <label for="description">Description <span aria-hidden="true">*</span></label>
                         <textarea id="description" name="description" required
                             placeholder="Why do you recommend this resource? What makes it valuable?"
                             rows="4"></textarea>
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Your Email *</label>
+                        <label for="email">Your Email <span aria-hidden="true">*</span></label>
                         <input type="email" id="email" name="email" required placeholder="your.email@example.com"
                             autocomplete="email">
                     </div>
@@ -149,13 +149,13 @@
                 <h2>Featured Success Stories</h2>
                 <div class="success-story">
                     <h3>From Intern to Senior Engineer</h3>
-                    <p><em>- Nomsa, Cape Town</em></p>
+                    <p><em>&mdash; Nomsa, Cape Town</em></p>
                     <p>"Using the GlobalDev Roadmap's curated resources, I went from tutorial-following to building
                         production systems in 18 months. The Lean Developer principles changed how I approach code."</p>
                 </div>
                 <div class="success-story">
                     <h3>Landing My First FAANG Role</h3>
-                    <p><em>- Themba, Johannesburg</em></p>
+                    <p><em>&mdash; Themba, Johannesburg</em></p>
                     <p>"The Harvard CS50 + algorithm practice combination prepared me for Google interviews. This
                         roadmap is gold for South African developers."</p>
                 </div>
@@ -178,7 +178,7 @@
     <footer class="main-footer">
         <p>&copy; 2026 GlobalDev Roadmap</p>
         <p>
-            <a href="references.html">References & Image Credits</a> |
+            <a href="references.html">References &amp; Image Credits</a> |
             <a href="siteplan.html">Site Plan</a>
         </p>
     </footer>

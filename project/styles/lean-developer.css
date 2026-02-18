@@ -1,30 +1,10 @@
 /* LEAN DEVELOPER PAGE STYLES */
 
-header nav {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    margin-top: 1rem;
-    flex-wrap: wrap;
-}
-
-header nav a {
-    color: var(--text-light);
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: 0.3s;
-}
-
-header nav a:hover,
-header nav a.active {
-    background-color: var(--color-accent);
-}
-
 /* HERO SECTION */
-.hero-section {
-    background: linear-gradient(135deg, var(--color-secondary), #2D3E50);
+.lean-hero {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: white;
     padding: 3rem 2rem;
     border-radius: 8px;
@@ -32,18 +12,17 @@ header nav a.active {
     margin-bottom: 3rem;
 }
 
-.hero-section h1 {
-    color: var(--color-accent);
+.lean-hero h1 {
+    color: white;
     font-size: 2.5rem;
     margin: 0 0 1rem 0;
 }
 
-/* Ensure lean-hero heading matches other pages (white) */
-.lean-hero h1 {
-    color: white;
+.lean-hero p {
+    color: #E0E0E0;
 }
 
-.hero-section .subtitle {
+.lean-hero .subtitle {
     font-size: 1.1rem;
     color: #E0E0E0;
     margin: 0;
@@ -52,6 +31,12 @@ header nav a.active {
 /* PRINCIPLE CARDS */
 .principle-section {
     margin-bottom: 3rem;
+}
+
+.principle-section h2,
+.resources-section h2,
+.practice-section h2 {
+    color: var(--color-accent);
 }
 
 .principle-card {
@@ -69,13 +54,6 @@ header nav a.active {
     margin-top: 0;
 }
 
-/* Section headings use the brand accent */
-.principle-section h2,
-.resources-section h2,
-.practice-section h2 {
-    color: var(--color-accent);
-}
-
 .principle-card ul {
     list-style-type: none;
     padding-left: 0;
@@ -90,16 +68,20 @@ header nav a.active {
     border-bottom: none;
 }
 
-.principle-card code {
-    display: block;
+.code-block {
     background-color: #f5f5f5;
     border-left: 3px solid var(--color-accent);
     padding: 1rem;
     margin: 1rem 0;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.code-block code {
     font-family: 'Courier New', monospace;
     font-size: 0.9rem;
     color: #333;
-    overflow-x: auto;
+    white-space: pre;
 }
 
 /* RESOURCES SECTION */
@@ -115,19 +97,19 @@ header nav a.active {
     margin-top: 0;
 }
 
-.resources-section ul {
+.resource-bullets {
     list-style-type: none;
     padding-left: 0;
 }
 
-.resources-section li {
+.resource-bullets li {
     padding: 0.7rem 0;
     padding-left: 1.5rem;
     position: relative;
 }
 
-.resources-section li:before {
-    content: "▸";
+.resource-bullets li::before {
+    content: "\25B8";
     position: absolute;
     left: 0;
     color: var(--color-accent);
@@ -151,20 +133,20 @@ header nav a.active {
     margin-top: 0;
 }
 
-.practice-section ol {
+.challenge-list {
     counter-reset: item;
     list-style-type: none;
     padding-left: 0;
 }
 
-.practice-section li {
+.challenge-list li {
     counter-increment: item;
     margin-bottom: 1rem;
     padding-left: 2rem;
     position: relative;
 }
 
-.practice-section li:before {
+.challenge-list li::before {
     content: counter(item);
     position: absolute;
     left: 0;
@@ -183,7 +165,7 @@ header nav a.active {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .hero-section h1 {
+    .lean-hero h1 {
         font-size: 1.8rem;
     }
 
@@ -191,7 +173,7 @@ header nav a.active {
         padding: 1.5rem;
     }
 
-    .principle-card code {
+    .code-block code {
         font-size: 0.85rem;
     }
 }
