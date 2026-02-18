@@ -8,6 +8,8 @@
     /* 30% Structural/branding */
     --color-accent: #FF4D00;
     /* 10% Actions/CTAs */
+    --color-accent-text: #C73D00;
+    /* Darkened for WCAG AA text contrast on white (4.86:1) */
 
     --text-dark: #1A1A1A;
     --text-light: #FFFFFF;
@@ -121,24 +123,40 @@ nav a[aria-current="page"] {
     }
 }
 
-/* Narrow screens: horizontal scrolling instead of wrapping */
+/* Tablet: allow nav wrapping */
 @media (max-width: 900px) {
+    header {
+        min-height: unset;
+        padding: 1rem;
+    }
+
     header nav {
-        justify-content: flex-start;
-        gap: 1rem;
-        overflow-x: auto;
-        /* horizontal scroll */
-        scrollbar-width: thin;
-        /* Firefox */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: .5rem;
+        white-space: normal;
     }
 
-    header nav::-webkit-scrollbar {
-        height: 8px;
+    header nav a {
+        padding: .4rem .75rem;
+        font-size: .9rem;
+    }
+}
+
+/* Mobile portrait: tighter and smaller logo */
+@media (max-width: 480px) {
+    header .site-logo {
+        height: 60px;
+        width: 60px;
     }
 
-    header nav::-webkit-scrollbar-thumb {
-        background: rgba(0, 0, 0, .25);
-        border-radius: 4px;
+    header nav {
+        gap: .35rem;
+    }
+
+    header nav a {
+        padding: .35rem .6rem;
+        font-size: .85rem;
     }
 }
 
@@ -323,36 +341,7 @@ footer a {
         url('../images/mozaic.webp');
 }
 
-/* Modern formats upgrade */
-@supports (background-image: image-set(url('../images/index.avif') type('image/avif'))) {
-    .hero-banner {
-        background-image:
-            linear-gradient(rgba(27, 38, 59, .8), rgba(27, 38, 59, .8)),
-            image-set(url("../images/lean-dev.avif") type("image/avif"),
-                url("../images/lean-dev.webp") type("image/webp"));
-    }
 
-    .community-hero {
-        background-image:
-            linear-gradient(rgba(27, 38, 59, .8), rgba(27, 38, 59, .8)),
-            image-set(url("../images/coding.avif") type("image/avif"),
-                url("../images/coding.webp") type("image/webp"));
-    }
-
-    .lean-hero {
-        background-image:
-            linear-gradient(rgba(27, 38, 59, .8), rgba(27, 38, 59, .8)),
-            image-set(url("../images/index.avif") type("image/avif"),
-                url("../images/index.webp") type("image/webp"));
-    }
-
-    .resources-hero {
-        background-image:
-            linear-gradient(rgba(27, 38, 59, .8), rgba(27, 38, 59, .8)),
-            image-set(url("../images/mozaic.avif") type("image/avif"),
-                url("../images/mozaic.webp") type("image/webp"));
-    }
-}
 
 .hero-subtext {
     color: #fff;
@@ -488,7 +477,7 @@ footer a {
 }
 
 .institution {
-    color: var(--color-accent);
+    color: var(--color-accent-text);
     font-weight: bold;
     font-size: .9rem;
     padding: 0 1.5rem;
@@ -571,7 +560,7 @@ footer a {
     border-left: 4px solid var(--color-accent);
 }
 
-.principle-preview h4 {
+.principle-preview h3 {
     color: var(--color-secondary);
     margin: 0 0 .5rem 0;
 }
@@ -722,7 +711,7 @@ footer a {
 }
 
 .about-hero h2 {
-    color: var(--color-accent);
+    color: var(--color-accent-text);
     border-bottom: 2px solid var(--color-accent);
     padding-bottom: 0.5rem;
     margin-top: 2.5rem;
@@ -751,7 +740,7 @@ footer a {
 
 .references-content h2,
 .notes h2 {
-    color: var(--color-accent);
+    color: var(--color-accent-text);
     border-bottom: 2px solid var(--color-accent);
     padding-bottom: 0.5rem;
     margin-top: 2rem;

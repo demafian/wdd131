@@ -36,7 +36,7 @@
 .principle-section h2,
 .resources-section h2,
 .practice-section h2 {
-    color: var(--color-accent);
+    color: var(--color-accent-text);
 }
 
 .principle-card {
@@ -112,7 +112,7 @@
     content: "\25B8";
     position: absolute;
     left: 0;
-    color: var(--color-accent);
+    color: var(--color-accent-text);
     font-weight: bold;
 }
 
