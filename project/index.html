@@ -2,22 +2,28 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GlobalDev Roadmap | Home</title>
     <meta name="description"
         content="Explore GlobalDev Roadmap: a curated guide to free and high-value developer resources, community support, and lean growth principles for South African learners.">
     <meta name="author" content="Sizwe Athur Nkosi">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header>
         <div class="header-container">
             <img class="site-logo" src="images/globaldev-icon.svg" alt="GlobalDev Logo">
             <h1 class="sr-only">GlobalDev Roadmap</h1>
         </div>
-        <nav role="navigation">
+        <nav aria-label="Main">
             <a href="index.html">Home</a>
             <a href="resources.html">Resources</a>
             <a href="lean-developer.html">Lean Developer</a>
@@ -26,7 +32,7 @@
         </nav>
     </header>
 
-    <main class="container">
+    <main id="main-content" class="container">
         <section class="hero-banner">
             <h2>Empower Your Developer Journey</h2>
             <p>From Local Fundamentals to FAANG Elite — Master the skills that matter</p>
@@ -38,6 +44,7 @@
             </div>
         </section>
 
+        <!-- FEATURES -->
         <section class="features-section">
             <h2>Why GlobalDev Roadmap?</h2>
             <div class="features-grid">
@@ -64,10 +71,11 @@
             </div>
         </section>
 
+        <!-- SPOTLIGHT -->
         <section class="spotlight-section">
             <h2>Featured Learning Resources</h2>
             <div class="spotlight-grid">
-                <div class="spotlight-card">
+                <article class="spotlight-card">
                     <div class="spotlight-header">
                         <img src="https://pll.harvard.edu/sites/default/files/styles/16_9_large/public/course/CS50x_pll.png?itok=AxciDjWM"
                             alt="Harvard CS50" loading="lazy" decoding="async" width="600" height="338"
@@ -81,10 +89,15 @@
                         <span class="tag tag-cs">Computer Science</span>
                         <span class="tag tag-intermediate">Intermediate</span>
                     </div>
-                    <a href="resources.html" class="btn-explore">Explore Resource</a>
-                </div>
 
-                <div class="spotlight-card">
+                    <a class="btn-explore" href="https://cs50.harvard.edu/x/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Explore Harvard CS50 on the official site (opens in a new tab)">
+                        Explore Resource
+                    </a>
+
+                </article>
+
+                <article class="spotlight-card">
                     <div class="spotlight-header">
                         <img src="https://media.licdn.com/dms/image/sync/v2/D4E27AQEaUBol2YpQMQ/articleshare-shrink_800/B4EZtzxgzrGoAI-/0/1767173918274?e=2147483647&v=beta&t=4cJdn7Ujt9CiyKZUdvSF_3WoAzPKuCg5OOEC4aPKJIc"
                             alt="Google DevOps" loading="lazy" decoding="async" width="600" height="338"
@@ -98,10 +111,16 @@
                         <span class="tag tag-devops">DevOps & Systems</span>
                         <span class="tag tag-advanced">Advanced</span>
                     </div>
-                    <a href="resources.html" class="btn-explore">Explore Resource</a>
-                </div>
 
-                <div class="spotlight-card">
+                    <a class="btn-explore" href="https://cloud.google.com/training" target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Explore Google Cloud training on the official site (opens in a new tab)">
+                        Explore Resource
+                    </a>
+
+                </article>
+
+                <article class="spotlight-card">
                     <div class="spotlight-header">
                         <img src="https://raw.githubusercontent.com/roshangrewal/IBM-Data-Science-Professional-Certification/master/IBM-Banner.png"
                             alt="IBM Data Science" loading="lazy" decoding="async" width="600" height="200"
@@ -115,14 +134,20 @@
                         <span class="tag tag-ai">Data Science & AI</span>
                         <span class="tag tag-intermediate">Intermediate</span>
                     </div>
-                    <a href="resources.html" class="btn-explore">Explore Resource</a>
-                </div>
+
+                    <a class="btn-explore" href="https://www.ibm.com/training" target="_blank" rel="noopener noreferrer"
+                        aria-label="Explore IBM Data Science certificate on Coursera (opens in a new tab)">
+                        Explore Resource
+                    </a>
+
+                </article>
             </div>
             <div class="center-content top-margin-2">
                 <a href="resources.html" class="btn-cta">View All Resources</a>
             </div>
         </section>
 
+        <!-- PRINCIPLES PREVIEW -->
         <section class="principles-preview">
             <h2>The Lean Developer Philosophy</h2>
             <div class="principles-preview-grid">
@@ -148,6 +173,7 @@
             </div>
         </section>
 
+        <!-- CTA -->
         <section class="cta-section">
             <h2>Ready to Build Your FAANG-Ready Career?</h2>
             <p>Join thousands of developers using GlobalDev Roadmap to master international standards while respecting

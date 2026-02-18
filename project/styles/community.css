@@ -23,14 +23,16 @@ header nav a.active {
 }
 
 /* HERO SECTION */
+
 .community-hero {
-    background: linear-gradient(135deg, var(--color-secondary), #2D3E50);
+    /* Do NOT set background or background-image here */
     color: white;
     padding: 3rem 2rem;
     border-radius: 8px;
     text-align: center;
     margin-bottom: 2rem;
 }
+
 
 .community-hero h1 {
     color: white;

@@ -2,23 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resources | GlobalDev Roadmap</title>
     <meta name="description"
         content="Explore curated learning paths, from Computer Science to DevOps, optimized for South African developers.">
     <meta name="author" content="Sizwe Athur Nkosi">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/resources.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header>
         <div class="header-container">
             <img class="site-logo" src="images/globaldev-icon.svg" alt="GlobalDev Logo">
             <h1 class="sr-only">GlobalDev Roadmap</h1>
         </div>
-        <nav role="navigation">
+        <nav aria-label="Main">
             <a href="index.html">Home</a>
             <a href="resources.html">Resources</a>
             <a href="lean-developer.html">Lean Developer</a>
@@ -27,9 +33,15 @@
         </nav>
     </header>
 
-    <main class="container">
-        <section class="filter-section">
-            <h2 id="resources-heading" class="sr-only">Learning Resources</h2>
+    <main id="main-content" class="container">
+        <section class="resources-hero">
+            <h1>Learning Resources</h1>
+            <p>Curated high‑value, zero‑cost learning paths. Filter by field, difficulty, and region.</p>
+        </section>
+
+        <section class="filter-section" aria-labelledby="resources-heading">
+            <h2 id="resources-heading" class="sr-only">Filter Resources</h2>
+
             <div class="filter-controls">
                 <div class="filter-group">
                     <label for="field-filter">Field:</label>
@@ -57,20 +69,27 @@
                     <label for="region-filter">Region:</label>
                     <select id="region-filter" aria-label="Filter by region">
                         <option value="">All Regions</option>
-                        <option value="Both">Both (Local + International)</option>
+                        <option value="South Africa Local">South Africa Local</option>
                         <option value="International Remote">International Remote</option>
+                        <option value="Both">Both (Local + International)</option>
                     </select>
                 </div>
 
                 <div class="filter-actions">
-                    <button class="btn-reset" id="reset-btn">Reset Filters</button>
-                    <button class="btn-saved" id="view-saved-btn">View Saved</button>
+                    <button class="btn-reset" id="reset-btn" type="button">Reset Filters</button>
+                    <button class="btn-saved" id="view-saved-btn" type="button" aria-pressed="false">View Saved</button>
                 </div>
             </div>
+
+            <p id="filter-status" class="sr-only" aria-live="polite" role="status"></p>
         </section>
 
-        <section class="resources-section">
-            <div id="resource-grid" class="resource-grid"></div>
+        <section class="resources-section" aria-labelledby="resources-title">
+            <h2 id="resources-title" class="sr-only">Resources Grid</h2>
+            <div id="resource-grid" class="resource-grid" aria-live="polite"></div>
+            <noscript>
+                <p>Please enable JavaScript to view and filter the resources.</p>
+            </noscript>
         </section>
     </main>
 
@@ -83,47 +102,6 @@
     </footer>
 
     <script src="scripts/resources.js"></script>
-    <script>
-        // DOM Element references
-        const fieldSelect = document.getElementById('field-filter');
-        const difficultySelect = document.getElementById('difficulty-filter');
-        const regionSelect = document.getElementById('region-filter');
-        const resetBtn = document.getElementById('reset-btn');
-        const savedBtn = document.getElementById('view-saved-btn');
-
-        // Initial Load
-        document.addEventListener('DOMContentLoaded', () => {
-            if (typeof displayResources === "function") {
-                displayResources();
-            }
-        });
-
-        // Filtering Events
-        const controls = [fieldSelect, difficultySelect, regionSelect];
-        controls.forEach(control => {
-            control.addEventListener('change', () => {
-                const field = fieldSelect.value || null;
-                const difficulty = difficultySelect.value || null;
-                const region = regionSelect.value || null;
-                const filtered = filterResources(field, difficulty, region);
-                displayResources(filtered);
-            });
-        });
-
-        // Action Events
-        resetBtn.addEventListener('click', () => {
-            fieldSelect.value = '';
-            difficultySelect.value = '';
-            regionSelect.value = '';
-            displayResources();
-        });
-
-        savedBtn.addEventListener('click', () => {
-            const saved = getSavedResources();
-            displayResources(saved);
-            alert('Displaying your saved resources. To see all, click "Reset Filters".');
-        });
-    </script>
 </body>
 
 </html>

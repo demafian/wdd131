@@ -2,23 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Community | GlobalDev Roadmap</title>
     <meta name="description"
         content="Join the GlobalDev community: suggest resources, read success stories, and collaborate with fellow developers across South Africa.">
     <meta name="author" content="Sizwe Athur Nkosi">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/community.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header>
         <div class="header-container">
             <img class="site-logo" src="images/globaldev-icon.svg" alt="GlobalDev Logo">
             <h1 class="sr-only">GlobalDev Roadmap</h1>
         </div>
-        <nav role="navigation">
+        <nav aria-label="Main">
             <a href="index.html">Home</a>
             <a href="resources.html">Resources</a>
             <a href="lean-developer.html">Lean Developer</a>
@@ -27,7 +33,7 @@
         </nav>
     </header>
 
-    <main class="container">
+    <main id="main-content" class="container">
         <section class="community-hero">
             <h1>Join the GlobalDev Community</h1>
             <p>Share resources, ask questions, and help fellow developers on their journey to FAANG excellence</p>
@@ -39,17 +45,17 @@
                 <p>Found an amazing learning resource? Help us build the ultimate developer roadmap by suggesting tools,
                     courses, and communities you've found valuable.</p>
 
-                <form id="suggestion-form" class="suggestion-form">
+                <form id="suggestion-form" class="suggestion-form" novalidate>
                     <div class="form-group">
                         <label for="resource-name">Resource Name *</label>
                         <input type="text" id="resource-name" name="resourceName" required
-                            placeholder="e.g., Codecademy Pro">
+                            placeholder="e.g., Codecademy Pro" autocomplete="organization-title">
                     </div>
 
                     <div class="form-group">
                         <label for="institution">Institution/Organization *</label>
                         <input type="text" id="institution" name="institution" required
-                            placeholder="e.g., Codecademy Inc.">
+                            placeholder="e.g., Codecademy Inc." autocomplete="organization">
                     </div>
 
                     <div class="form-group">
@@ -82,8 +88,8 @@
                             <label for="region">Region *</label>
                             <select id="region" name="region" required>
                                 <option value="">-- Select Region --</option>
-                                <option value="International Remote">International Remote</option>
                                 <option value="South Africa Local">South Africa Local</option>
+                                <option value="International Remote">International Remote</option>
                                 <option value="Both">Both</option>
                             </select>
                         </div>
@@ -91,7 +97,8 @@
 
                     <div class="form-group">
                         <label for="url">Resource URL *</label>
-                        <input type="url" id="url" name="url" required placeholder="https://example.com">
+                        <input type="url" id="url" name="url" required placeholder="https://example.com"
+                            autocomplete="url">
                     </div>
 
                     <div class="form-group">
@@ -103,7 +110,8 @@
 
                     <div class="form-group">
                         <label for="email">Your Email *</label>
-                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com"
+                            autocomplete="email">
                     </div>
 
                     <div class="form-group checkbox">
@@ -117,7 +125,8 @@
                         <button type="reset" class="btn-reset">Clear Form</button>
                     </div>
                 </form>
-                <div id="form-message" class="form-message" style="display: none;"></div>
+
+                <div id="form-message" class="form-message" role="status" aria-live="polite" hidden></div>
             </article>
 
             <article class="community-card">
@@ -157,9 +166,11 @@
             <h2>Have Questions?</h2>
             <p>For general inquiries, technical support, or partnership opportunities, reach out:</p>
             <ul class="contact-list">
-                <li><strong>Email:</strong> info@globaldev-roadmap.com</li>
-                <li><strong>GitHub:</strong> github.com/globaldev-roadmap</li>
-                <li><strong>Discord:</strong> Join our community server for real-time discussions</li>
+                <li><strong>Email:</strong> <a href="mailto:info@globaldev-roadmap.com">info@globaldev-roadmap.com</a>
+                </li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/demafian?tab=repositories" target="_blank"
+                        rel="noopener noreferrer">github.com/demafian</a></li>
+                <li><strong>Discord:</strong> <em>Community server coming soon</em></li>
             </ul>
         </section>
     </main>
