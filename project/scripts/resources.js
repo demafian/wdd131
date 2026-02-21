@@ -115,6 +115,94 @@ const resources = [
         description: "Local meetups and talks focused on open-source software and web fundamentals.",
         url: "https://www.meetup.com/topics/open-source/za/",
         image: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Meetup_Logo.png"
+    },
+    {
+        id: 10,
+        name: "GitHub Learning Lab",
+        institution: "GitHub",
+        field: "DevOps & Systems",
+        difficulty: "Beginner",
+        region: "International Remote",
+        description: "Hands-on Git and GitHub courses taught by bots. Learn version control and open-source collaboration in your own repos.",
+        url: "https://learn.github.com/courses",
+        image: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+    },
+    {
+        id: 11,
+        name: "Hello Interview",
+        institution: "Hello Interview",
+        field: "Computer Science",
+        difficulty: "Advanced",
+        region: "International Remote",
+        description: "AI-powered mock interviews for FAANG and top-tier companies. Practise system design, algorithms, and behavioural rounds.",
+        url: "https://www.hellointerview.com/",
+        image: "https://www.hellointerview.com/favicon.ico"
+    },
+    {
+        id: 12,
+        name: "W3Schools",
+        institution: "W3Schools",
+        field: "Web Development",
+        difficulty: "Beginner",
+        region: "Both",
+        description: "The go-to quick reference for HTML, CSS, JavaScript, SQL, and more. Works well on low-bandwidth connections.",
+        url: "https://www.w3schools.com/",
+        image: "https://www.w3schools.com/images/w3schools_logo_436_2.png"
+    },
+    {
+        id: 13,
+        name: "Scrimba",
+        institution: "Scrimba",
+        field: "Web Development",
+        difficulty: "Intermediate",
+        region: "International Remote",
+        description: "Interactive screencasts where you can pause and edit code inline. Front-end focused with React, CSS, and JavaScript paths.",
+        url: "https://scrimba.com/courses",
+        image: "https://www.google.com/s2/favicons?domain=scrimba.com&sz=128"
+    },
+    {
+        id: 14,
+        name: "AWS Skill Builder",
+        institution: "Amazon Web Services",
+        field: "DevOps & Systems",
+        difficulty: "Intermediate",
+        region: "International Remote",
+        description: "Free cloud training from AWS — over 500 digital courses covering cloud practitioner, architecture, and DevOps fundamentals.",
+        url: "https://skillbuilder.aws/search?page=1&typeId=digital_course",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png"
+    },
+    {
+        id: 15,
+        name: "MDN Web Docs",
+        institution: "Mozilla",
+        field: "Web Development",
+        difficulty: "Beginner",
+        region: "Both",
+        description: "The authoritative reference for web standards — HTML, CSS, JavaScript APIs. Essential daily bookmark for every web developer.",
+        url: "https://developer.mozilla.org/en-US/",
+        image: "https://developer.mozilla.org/mdn-social-share.png"
+    },
+    {
+        id: 16,
+        name: "QuickRef.ME",
+        institution: "QuickRef",
+        field: "Computer Science",
+        difficulty: "Beginner",
+        region: "Both",
+        description: "Community-maintained cheatsheets for 200+ languages and tools. Lightweight, offline-friendly, and fast to load on mobile data.",
+        url: "https://quickref.me/",
+        image: "https://quickref.me/images/favicon.png"
+    },
+    {
+        id: 17,
+        name: "Real Python",
+        institution: "Real Python",
+        field: "Data Science & AI",
+        difficulty: "Intermediate",
+        region: "International Remote",
+        description: "In-depth Python tutorials and courses from working developers. Covers data science, automation, APIs, and clean code practices.",
+        url: "https://realpython.com/",
+        image: "https://www.google.com/s2/favicons?domain=realpython.com&sz=128"
     }
 ];
 
